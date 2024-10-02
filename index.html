@@ -54,12 +54,12 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: 'http://0.0.0.0:8080/login.php', // Change to correct PHP file path
+                    url: 'https://salian-web.infinityfreeapp.com/my-web/login.php', // Change to correct PHP file path
                     data: $(this).serialize(), // Send form data
                     dataType: 'json', // Expect a JSON response
                     success: function (response) {
                         if (response.status === 'success') {
-                            window.location.href = 'http://0.0.0.0:8080/main.php'; // Redirect on success
+                            window.location.href = 'https://salian-web.infinityfreeapp.com/my-web/main.php'; // Redirect on success
                         } else {
                             $('#error_message').text(response.message); // Display error message
                         }
